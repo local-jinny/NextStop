@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE_KO}} — POSTER ARCHIVE</title>
+<meta name="description" content="{{TITLE_KO}} ({{TITLE_EN}}) / {{ARTIST}}">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-logo" href="../index.html"><span class="pin">✦</span> 환승역: NEXT STOP</a>
+    <a class="signboard" href="../gallery.html">← 전체 아카이브</a>
+  </div>
+</header>
+
+<main class="poster-detail">
+  <div class="wrap">
+    <div class="detail-grid">
+
+      <div class="detail-image">
+        <img src="../assets/images/{{IMAGE}}" alt="{{TITLE_KO}}"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-box',innerHTML:'이미지 준비 중<br>{{ID}} / {{IMAGE}}'}))">
+      </div>
+
+      <div class="detail-info">
+        <div class="tag-row">
+          <span class="tag">
+            <span class="tag-label">NO.</span>
+            <span class="flap" data-target="{{ID}}"><span class="flap-digit">0</span><span class="flap-digit">0</span></span>
+          </span>
+        </div>
+        <h1 class="title-ko">{{TITLE_KO}}</h1>
+        <p class="title-en">{{TITLE_EN}}</p>
+
+        <p class="artist">{{ARTIST}}</p>
+        <a class="sns" href="{{SNS}}" target="_blank" rel="noopener">{{SNS_HANDLE}}</a>
+
+        <p class="detail-desc">{{DESC}}</p>
+
+        <div class="transfer-nav">
+          <a href="{{PREV_HREF}}"><small>◀ PREV</small>{{PREV_TITLE}}</a>
+          <a href="{{NEXT_HREF}}"><small>NEXT ▶</small>{{NEXT_TITLE}}</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">yawayats 70th EXHIBITION · 2026</div>
+</footer>
+
+<script src="../assets/js/flap.js"></script>
+
+</body>
+</html>

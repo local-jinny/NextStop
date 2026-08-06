@@ -1,0 +1,668 @@
+/* ============================================================
+   포스터 아카이브 — 솔리드 네이비 컬러 시스템
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+
+:root {
+  --navy: #333474;
+  --white: #ffffff;
+  --ink: #ffffff;
+  --muted: rgba(255, 255, 255, 0.68);
+  --faint: rgba(255, 255, 255, 0.45);
+  --line: rgba(255, 255, 255, 0.22);
+  --stripe-1: rgba(255, 255, 255, 0.08);
+  --stripe-2: transparent;
+  --surface: #333474;
+  --point: #69d1cb;
+  --sub: #f9ddaf;
+
+  --font: 'Noto Sans KR', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--navy);
+  color: var(--ink);
+  font-family: var(--font);
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--navy);
+  /* 별: 260x520 타일 안에 두 줄(0-260, 260-520)을 절반폭만큼 어긋나게 배치 — 벽돌/벌집 느낌 */
+  background-image:
+    radial-gradient(circle at 18px 32px, rgba(255, 255, 255, 0.9) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 52px 90px, rgba(255, 255, 255, 0.6) 1px, transparent 1px),
+    radial-gradient(circle at 95px 15px, rgba(255, 255, 255, 0.8) 2px, transparent 2px),
+    radial-gradient(circle at 130px 60px, rgba(105, 209, 203, 0.5) 1.2px, transparent 1.2px),
+    radial-gradient(circle at 160px 110px, rgba(255, 255, 255, 0.7) 1.8px, transparent 1.8px),
+    radial-gradient(circle at 200px 40px, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+    radial-gradient(circle at 225px 140px, rgba(249, 221, 175, 0.55) 2.2px, transparent 2.2px),
+    radial-gradient(circle at 240px 190px, rgba(255, 255, 255, 0.65) 1.3px, transparent 1.3px),
+    radial-gradient(circle at 30px 150px, rgba(255, 255, 255, 0.45) 1px, transparent 1px),
+    radial-gradient(circle at 70px 200px, rgba(255, 255, 255, 0.75) 1.6px, transparent 1.6px),
+    radial-gradient(circle at 110px 230px, rgba(105, 209, 203, 0.4) 1px, transparent 1px),
+    radial-gradient(circle at 150px 180px, rgba(255, 255, 255, 0.6) 2px, transparent 2px),
+    radial-gradient(circle at 190px 220px, rgba(255, 255, 255, 0.5) 1.2px, transparent 1.2px),
+    radial-gradient(circle at 10px 210px, rgba(249, 221, 175, 0.45) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 235px 70px, rgba(255, 255, 255, 0.55) 1px, transparent 1px),
+    radial-gradient(circle at 175px 15px, rgba(255, 255, 255, 0.7) 1.8px, transparent 1.8px),
+    radial-gradient(circle at 45px 110px, rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+    radial-gradient(circle at 100px 10px, rgba(255, 255, 255, 0.6) 1.3px, transparent 1.3px),
+    radial-gradient(circle at 148px 292px, rgba(255, 255, 255, 0.9) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 182px 350px, rgba(255, 255, 255, 0.6) 1px, transparent 1px),
+    radial-gradient(circle at 225px 275px, rgba(255, 255, 255, 0.8) 2px, transparent 2px),
+    radial-gradient(circle at 0px 320px, rgba(105, 209, 203, 0.5) 1.2px, transparent 1.2px),
+    radial-gradient(circle at 30px 370px, rgba(255, 255, 255, 0.7) 1.8px, transparent 1.8px),
+    radial-gradient(circle at 70px 300px, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+    radial-gradient(circle at 95px 400px, rgba(249, 221, 175, 0.55) 2.2px, transparent 2.2px),
+    radial-gradient(circle at 110px 450px, rgba(255, 255, 255, 0.65) 1.3px, transparent 1.3px),
+    radial-gradient(circle at 160px 410px, rgba(255, 255, 255, 0.45) 1px, transparent 1px),
+    radial-gradient(circle at 200px 460px, rgba(255, 255, 255, 0.75) 1.6px, transparent 1.6px),
+    radial-gradient(circle at 240px 490px, rgba(105, 209, 203, 0.4) 1px, transparent 1px),
+    radial-gradient(circle at 20px 440px, rgba(255, 255, 255, 0.6) 2px, transparent 2px),
+    radial-gradient(circle at 60px 480px, rgba(255, 255, 255, 0.5) 1.2px, transparent 1.2px),
+    radial-gradient(circle at 140px 470px, rgba(249, 221, 175, 0.45) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 105px 330px, rgba(255, 255, 255, 0.55) 1px, transparent 1px),
+    radial-gradient(circle at 45px 275px, rgba(255, 255, 255, 0.7) 1.8px, transparent 1.8px),
+    radial-gradient(circle at 175px 370px, rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+    radial-gradient(circle at 230px 270px, rgba(255, 255, 255, 0.6) 1.3px, transparent 1.3px),
+    linear-gradient(180deg, #2c5690 0%, var(--navy) 45%, #1b1d61 100%);
+  background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
+  background-size: 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 260px 520px, 100% 100%;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+h1, h2, h3 { font-family: var(--font); font-weight: 700; margin: 0; }
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------- 상단 헤더 / 내비 ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: transparent;
+  border-bottom: 1px solid var(--white);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.site-logo {
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+}
+.site-logo .pin {
+  color: var(--point);
+  font-size: 1.1rem;
+}
+
+.signboard {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: var(--point);
+  color: var(--navy);
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: 0.92rem;
+  border: 1px solid var(--point);
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+.signboard:hover {
+  background: var(--sub);
+  border-color: var(--sub);
+  color: var(--navy);
+}
+
+/* ---------- 랜딩 페이지 히어로 ---------- */
+.landing-header .wrap {
+  justify-content: center;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(28px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 64px);
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero > .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+/* 사인포스트 일러스트 — 화면1(타이틀)에서만, 화면 크기에 따라 위치/크기 변형
+   top 기준 고정 오프셋으로 앵커링 — 헤더에 잘리거나 하단에 뜨는 것을 방지 */
+@keyframes hubEnter {
+  from { opacity: 0; transform: translateY(28px) rotate(10deg); }
+  to { opacity: var(--hub-opacity, 1); transform: translateY(0) rotate(0deg); }
+}
+.hub-illustration {
+  --hub-opacity: 1;
+  position: absolute;
+  z-index: 0;
+  top: clamp(70px, 5vh, 120px);
+  right: clamp(150px, -1vw, 200px);
+  width: clamp(200px, 34vw, 520px);
+  height: auto;
+  opacity: var(--hub-opacity);
+  pointer-events: none;
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.3));
+  animation: hubEnter 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+  transform-origin: 70% 85%;
+}
+@media (max-width: 720px) {
+  .hub-illustration {
+    --hub-opacity: 0.5;
+    top: 10vh;
+    right: -16vw;
+    width: clamp(260px, 85vw, 460px);
+  }
+}
+
+.hero-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.hero-screen.is-active { display: flex; }
+
+.hero-eyebrow {
+  display: inline-block;
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 3px;
+  color: var(--point);
+  margin-bottom: 28px;
+}
+.hero-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.hero-title img {
+  width: min(78vw, 500px);
+  height: auto;
+  transform: translateX(-18px);
+}
+.hero-screen.is-active .hero-eyebrow { animation: floatUp 0.7s ease-out both; }
+.hero-screen.is-active .hero-title { animation: floatUp 0.7s ease-out 0.12s both; }
+.hero-screen.is-active .arrow-button { animation: floatUp 0.7s ease-out 0.24s both; }
+
+.arrow-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-top: 36px;
+  padding: 0;
+  border: 1px solid var(--point);
+  border-radius: 50%;
+  background: var(--point);
+  color: var(--navy);
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+.arrow-button svg {
+  width: 22px;
+  height: 22px;
+}
+.arrow-button:hover {
+  background: var(--sub);
+  border-color: var(--sub);
+  color: var(--navy);
+  transform: scale(1.06);
+}
+
+.intro-star img {
+  width: 30px;
+  height: auto;
+  margin: 0 auto 32px;
+}
+.intro-text {
+  max-width: 560px;
+  margin: 0 auto 44px;
+}
+.intro-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.intro-text p:last-child { margin-bottom: 0; }
+.intro-question {
+  max-width: 560px;
+  margin: 0 auto 45px;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+}
+.hero-screen.is-active .intro-star { animation: floatUp 0.7s ease-out both; }
+.hero-screen.is-active .intro-text p:nth-child(1) { animation: floatUp 0.6s ease-out 0.12s both; }
+.hero-screen.is-active .intro-text p:nth-child(2) { animation: floatUp 0.6s ease-out 0.24s both; }
+.hero-screen.is-active .intro-text p:nth-child(3) { animation: floatUp 0.6s ease-out 0.36s both; }
+.hero-screen.is-active .intro-question { animation: floatUp 0.6s ease-out 0.48s both; }
+.hero-screen.is-active .cta-row { animation: floatUp 0.7s ease-out 0.6s both; }
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.cta-button,
+.cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 44px;
+  border-radius: 40px;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.cta-button {
+  border: 1px solid var(--point);
+  background: var(--point);
+  color: var(--navy);
+}
+.cta-button:hover {
+  background: var(--sub);
+  border-color: var(--sub);
+  color: var(--navy);
+}
+
+.cta-secondary {
+  border: 1px solid var(--point);
+  background: var(--navy);
+  color: var(--point);
+}
+.cta-secondary:hover {
+  background: var(--point);
+  color: var(--navy);
+}
+
+/* ---------- 갤러리 그리드 ---------- */
+.gallery {
+  padding: 20px 0 100px;
+}
+.gallery-intro {
+  padding: 56px 0 0;
+  text-align: center;
+}
+.gallery-logo {
+  display: flex;
+  justify-content: center;
+  transform: translateX(-8px);
+  animation: galleryLogoFloatUp 0.7s ease-out both;
+}
+.gallery-logo img {
+  width: min(60vw, 260px);
+  height: auto;
+  transform: translateX(-6px);
+}
+@keyframes galleryLogoFloatUp {
+  from { opacity: 0; transform: translateX(-8px) translateY(28px); }
+  to { opacity: 1; transform: translateX(-8px) translateY(0); }
+}
+.gallery-intro p {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 1rem;
+  animation: floatUp 0.7s ease-out 0.12s both;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 34px;
+  margin-top: 40px;
+}
+
+.poster-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--white);
+  border-radius: 8px;
+  padding: 10px 10px 16px;
+  box-shadow: 3px 3px 0 var(--line);
+  opacity: 0;
+  transform: translateY(28px) rotate(var(--tilt, -1.5deg));
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, box-shadow 0.25s ease;
+  display: block;
+}
+.poster-card:nth-child(2n) { --tilt: 1.5deg; }
+.poster-card:nth-child(3n) { --tilt: -1deg; }
+.poster-card:nth-child(5n) { --tilt: 1.2deg; }
+
+.poster-card.is-visible {
+  opacity: 1;
+  transform: translateY(0) rotate(var(--tilt, -1.5deg));
+}
+
+.poster-card:hover {
+  transform: rotate(0deg) translateY(-6px) scale(1.02);
+  box-shadow: 5px 5px 0 var(--point);
+  z-index: 5;
+}
+
+.poster-card .thumb {
+  aspect-ratio: 3 / 4;
+  border-radius: 4px;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(45deg, var(--stripe-1) 0 2px, var(--stripe-2) 2px 14px);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--faint);
+  font-family: var(--font);
+  font-size: 0.85rem;
+}
+.poster-card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-card .meta {
+  padding: 12px 6px 2px;
+  color: var(--ink);
+}
+.poster-card .meta .num {
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--faint);
+  letter-spacing: 1px;
+}
+.poster-card .meta h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+.poster-card .meta .artist {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ---------- 개별 상세 페이지 ---------- */
+.poster-detail {
+  padding: 56px 0 100px;
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: start;
+}
+@media (max-width: 860px) {
+  .detail-grid { grid-template-columns: 1fr; }
+}
+
+.detail-image {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  padding: 14px;
+  animation: floatUp 0.7s ease-out both;
+}
+.detail-info {
+  animation: floatUp 0.7s ease-out 0.15s both;
+}
+.detail-image img {
+  border-radius: 4px;
+  width: 100%;
+}
+.detail-image .placeholder-box {
+  aspect-ratio: 3/4;
+  border-radius: 4px;
+  background:
+    repeating-linear-gradient(45deg, var(--stripe-1) 0 2px, var(--stripe-2) 2px 14px);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--faint);
+  font-family: var(--font);
+  text-align: center;
+  padding: 20px;
+}
+
+.detail-info .tag-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.tag {
+  display: inline-flex;
+  align-items: baseline;
+  flex-shrink: 0;
+  gap: 8px;
+  font-family: var(--font);
+  background: var(--sub);
+  color: var(--navy);
+  padding: 10px 22px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* 전광판(split-flap) 숫자 — 시현용 */
+.tag-label {
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.75;
+}
+.flap {
+  display: inline-flex;
+  gap: 1px;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.flap-digit {
+  display: inline-block;
+  min-width: 0.68em;
+  text-align: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.detail-info .title-ko {
+  color: var(--ink);
+  font-size: clamp(1.9rem, 4.2vw, 2.7rem);
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+.detail-info .title-en {
+  color: var(--faint);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+.detail-info .artist {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+.detail-info .sns {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 26px;
+  word-break: break-all;
+}
+.detail-info .sns:hover { color: var(--point); }
+
+.detail-desc {
+  line-height: 1.85;
+  color: var(--muted);
+  font-size: 0.98rem;
+  margin-bottom: 34px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- 이전/다음(prev/next) 내비게이션 ---------- */
+.transfer-nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.transfer-nav a {
+  flex: 1;
+  min-width: 140px;
+  position: relative;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--white);
+  border-radius: 6px;
+  font-family: var(--font);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.transfer-nav a:hover {
+  transform: translateY(-3px);
+  background: var(--point);
+  border-color: var(--point);
+  color: var(--navy);
+}
+.transfer-nav a small {
+  font-family: var(--font);
+  font-weight: 500;
+  color: var(--faint);
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+}
+.transfer-nav a:hover small { color: var(--navy); }
+
+/* ---------- Info 페이지 ---------- */
+.info-page {
+  padding: 64px 0 100px;
+}
+.info-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+.info-logo img {
+  width: auto;
+  height: auto;
+}
+.info-intro {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.info-intro p {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.0;
+}
+
+.info-block {
+  max-width: 520px;
+  margin: 0 auto 48px;
+}
+.info-block h2 {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--faint);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+.info-row:last-child { border-bottom: none; }
+.info-row .role {
+  color: var(--faint);
+  font-weight: 500;
+}
+.info-row .value {
+  color: var(--ink);
+  font-weight: 700;
+}
+.info-row a.value {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.info-row a.value:hover { color: var(--point); }
+
+/* ---------- 푸터 ---------- */
+.site-footer {
+  border-top: 1px solid var(--white);
+  padding: 30px 0;
+  text-align: center;
+  color: var(--faint);
+  font-family: var(--font);
+  font-size: 0.78rem;
+  letter-spacing: 3px;
+}

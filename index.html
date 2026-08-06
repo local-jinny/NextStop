@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yawayats - 환승역: NEXT STOP</title>
+<meta name="description" content="12장의 그래픽 포스터를 소개하는 온라인 아카이브 전시">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="landing-body">
+
+<header class="site-header landing-header">
+  <div class="wrap">
+    <a class="site-logo"><span class="pin">✦</span>환승역: NEXT STOP<span class="pin">✦</span></a>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="hub-illustration" src="assets/images/hub.png" alt="" aria-hidden="true">
+  <div class="wrap">
+
+    <div class="hero-screen is-active" id="screen-1">
+      <span class="hero-eyebrow">yawayats 70th EXHIBITION · 2026</span>
+      <div class="hero-title">
+        <img src="assets/images/Title.svg" alt="POSTER ARCHIVE">
+      </div>
+      <button class="arrow-button" id="next-btn" type="button" aria-label="다음">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <polyline points="13 5 20 12 13 19"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    <div class="hero-screen" id="screen-2">
+      <div class="intro-star">
+        <img src="assets/images/star.svg" alt="">
+      </div>
+      <div class="intro-text">
+        <p>이곳은 현실과 상상, 시간과 차원, 기억과 미래를 연결하는<br>거대한 환승 허브.</p>
+        <p>행성, 평행세계, 꿈, 감정, 미지의 공간까지 모든 세계가<br>하나의 노선을 이루고 있습니다.</p>
+        <p>각 작품은 서로 다른 세계로 향하는 하나의 승강장이자<br>새로운 목적지입니다.</p>
+      </div>
+      <p class="intro-question">당신은 어떤 세계로 환승하시겠습니까?</p>
+      <div class="cta-row">
+        <a class="cta-button" href="gallery.html">진입하기 →</a>
+        <button class="cta-secondary" id="random-poster-btn" type="button">랜덤 환승 →</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">yawayats 70th EXHIBITION · 2026</div>
+</footer>
+
+<script>
+  document.getElementById('next-btn').addEventListener('click', function () {
+    document.getElementById('screen-1').classList.remove('is-active');
+    document.getElementById('screen-2').classList.add('is-active');
+  });
+</script>
+<script src="assets/js/random-poster.js"></script>
+
+</body>
+</html>
