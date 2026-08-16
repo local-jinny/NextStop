@@ -4,7 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{TITLE_KO}} — POSTER ARCHIVE</title>
-<meta name="description" content="{{TITLE_KO}} ({{TITLE_EN}}) / {{ARTIST}}">
+<meta name="description" content="{{TITLE_KO}}{{TITLE_EN_META}} / {{ARTIST}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{TITLE_KO}} — POSTER ARCHIVE">
+<meta property="og:description" content="{{TITLE_KO}}{{TITLE_EN_META}} / {{ARTIST}}">
+<meta property="og:url" content="https://local-jinny.github.io/NextStop/poster/{{ID}}.html">
+<meta property="og:image" content="https://local-jinny.github.io/NextStop/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE_KO}} — POSTER ARCHIVE">
+<meta name="twitter:description" content="{{TITLE_KO}}{{TITLE_EN_META}} / {{ARTIST}}">
+<meta name="twitter:image" content="https://local-jinny.github.io/NextStop/assets/images/og-image.jpg">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -12,7 +23,10 @@
 <header class="site-header">
   <div class="wrap">
     <a class="site-logo" href="../index.html"><span class="pin">✦</span> 환승역: NEXT STOP</a>
-    <a class="signboard" href="../gallery.html">← 전체 아카이브</a>
+    <div class="header-actions">
+      <button class="signboard" id="random-poster-btn" type="button" data-total="{{COUNT}}">RANDOMIZED</button>
+      <a class="signboard" href="../gallery.html">← 아카이브로</a>
+    </div>
   </div>
 </header>
 
@@ -21,14 +35,13 @@
     <div class="detail-grid">
 
       <div class="detail-image">
-        <img src="../assets/images/{{IMAGE}}" alt="{{TITLE_KO}}"
-             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-box',innerHTML:'이미지 준비 중<br>{{ID}} / {{IMAGE}}'}))">
+{{DETAIL_IMAGE_BLOCK}}
       </div>
 
       <div class="detail-info">
         <div class="tag-row">
           <span class="tag">
-            <span class="tag-label">NO.</span>
+            <span class="tag-label">Platform</span>
             <span class="flap" data-target="{{ID}}"><span class="flap-digit">0</span><span class="flap-digit">0</span></span>
           </span>
         </div>
@@ -36,13 +49,13 @@
         <p class="title-en">{{TITLE_EN}}</p>
 
         <p class="artist">{{ARTIST}}</p>
-        <a class="sns" href="{{SNS}}" target="_blank" rel="noopener">{{SNS_HANDLE}}</a>
+        {{SNS_BLOCK}}
 
         <p class="detail-desc">{{DESC}}</p>
 
         <div class="transfer-nav">
-          <a href="{{PREV_HREF}}"><small>◀ PREV</small>{{PREV_TITLE}}</a>
-          <a href="{{NEXT_HREF}}"><small>NEXT ▶</small>{{NEXT_TITLE}}</a>
+          <a href="{{PREV_HREF}}"><small>◀ PREV</small><span class="transfer-nav-title">{{PREV_TITLE}}</span></a>
+          <a href="{{NEXT_HREF}}"><small>NEXT ▶</small><span class="transfer-nav-title">{{NEXT_TITLE}}</span></a>
         </div>
       </div>
 
@@ -55,6 +68,8 @@
 </footer>
 
 <script src="../assets/js/flap.js"></script>
+<script src="../assets/js/poster-slider.js"></script>
+<script src="../assets/js/random-poster.js"></script>
 
 </body>
 </html>

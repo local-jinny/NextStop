@@ -3,8 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>포스터 한국어 제목 12 — POSTER ARCHIVE</title>
-<meta name="description" content="포스터 한국어 제목 12 (Poster English Title 12) / 작가명">
+<title>지난 집들이 모이는 곳 — POSTER ARCHIVE</title>
+<meta name="description" content="지난 집들이 모이는 곳 / 하예은">
+<meta property="og:type" content="website">
+<meta property="og:title" content="지난 집들이 모이는 곳 — POSTER ARCHIVE">
+<meta property="og:description" content="지난 집들이 모이는 곳 / 하예은">
+<meta property="og:url" content="https://local-jinny.github.io/NextStop/poster/12.html">
+<meta property="og:image" content="https://local-jinny.github.io/NextStop/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="지난 집들이 모이는 곳 — POSTER ARCHIVE">
+<meta name="twitter:description" content="지난 집들이 모이는 곳 / 하예은">
+<meta name="twitter:image" content="https://local-jinny.github.io/NextStop/assets/images/og-image.jpg">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -12,7 +23,10 @@
 <header class="site-header">
   <div class="wrap">
     <a class="site-logo" href="../index.html"><span class="pin">✦</span> 환승역: NEXT STOP</a>
-    <a class="signboard" href="../gallery.html">← 전체 아카이브</a>
+    <div class="header-actions">
+      <button class="signboard" id="random-poster-btn" type="button" data-total="14">RANDOMIZED</button>
+      <a class="signboard" href="../gallery.html">← 아카이브로</a>
+    </div>
   </div>
 </header>
 
@@ -21,28 +35,28 @@
     <div class="detail-grid">
 
       <div class="detail-image">
-        <img src="../assets/images/12.jpg" alt="포스터 한국어 제목 12"
+        <img src="../assets/images/12.jpg" alt="지난 집들이 모이는 곳" loading="lazy"
              onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-box',innerHTML:'이미지 준비 중<br>12 / 12.jpg'}))">
       </div>
 
       <div class="detail-info">
         <div class="tag-row">
           <span class="tag">
-            <span class="tag-label">NO.</span>
+            <span class="tag-label">Platform</span>
             <span class="flap" data-target="12"><span class="flap-digit">0</span><span class="flap-digit">0</span></span>
           </span>
         </div>
-        <h1 class="title-ko">포스터 한국어 제목 12</h1>
-        <p class="title-en">Poster English Title 12</p>
+        <h1 class="title-ko">지난 집들이 모이는 곳</h1>
+        <p class="title-en"></p>
 
-        <p class="artist">작가명</p>
-        <a class="sns" href="https://instagram.com/artist_handle" target="_blank" rel="noopener">@artist_handle</a>
+        <p class="artist">하예은</p>
+        <a class="sns" href="https://instagram.com/ha_design.3._" target="_blank" rel="noopener">@ha_design.3._</a>, <a class="sns" href="https://instagram.com/yeeun_ha.3._" target="_blank" rel="noopener">@yeeun_ha.3._</a>
 
-        <p class="detail-desc">이 작품은 도시의 밤과 이동이라는 주제를 그래픽 언어로 재해석한 포스터입니다. 기하학적 형태와 손그림 질감을 겹쳐 쌓아 올리며, 정지된 이미지 안에 움직임의 리듬을 담아내고자 했습니다. 색과 선이 만들어내는 긴장감은 보는 이로 하여금 화면 너머의 이야기를 상상하게 만들며, 전시 공간을 벗어나 온라인이라는 새로운 맥락 속에서도 고유한 존재감을 지니도록 설계되었습니다. 반복되는 형태와 여백은 관람자의 시선을 천천히 붙잡아 두며, 하나의 장면이 아닌 하나의 여정으로 포스터를 경험하게 합니다. 이 설명 텍스트는 실제 작품 소개 글(300자 내외)로 교체해 주세요.</p>
+        <p class="detail-desc">이사를 반복하며 지나온 집들의 기억을 하나의 따뜻한 세계로 재구성한 포스터입니다. 이 작품에서 '환승'은 새로운 장소로 떠나는 것이 아니라, 과거에 머물렀던 집의 조각들을 다시 만나는 여정입니다. 서로 다른 시간과 주소에 흩어진 공간과 사람의 흔적이 하나의 마음속 집을 이루며, '집은 장소가 아닌 기억의 축적'이라는 메시지를 전합니다.</p>
 
         <div class="transfer-nav">
-          <a href="11.html"><small>◀ PREV</small>포스터 한국어 제목 11</a>
-          <a href="01.html"><small>NEXT ▶</small>포스터 한국어 제목 01</a>
+          <a href="11.html"><small>◀ PREV</small><span class="transfer-nav-title">열차 안에서</span></a>
+          <a href="13.html"><small>NEXT ▶</small><span class="transfer-nav-title">신호 없음</span></a>
         </div>
       </div>
 
@@ -55,6 +69,8 @@
 </footer>
 
 <script src="../assets/js/flap.js"></script>
+<script src="../assets/js/poster-slider.js"></script>
+<script src="../assets/js/random-poster.js"></script>
 
 </body>
 </html>

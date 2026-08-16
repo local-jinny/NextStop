@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>INFO — 환승역: NEXT STOP</title>
 <meta name="description" content="야와야츠 크루 소개 및 전시 정보">
+<meta property="og:type" content="website">
+<meta property="og:title" content="INFO — 환승역: NEXT STOP">
+<meta property="og:description" content="야와야츠 크루 소개 및 전시 정보">
+<meta property="og:url" content="https://local-jinny.github.io/NextStop/info.html">
+<meta property="og:image" content="https://local-jinny.github.io/NextStop/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="INFO — 환승역: NEXT STOP">
+<meta name="twitter:description" content="야와야츠 크루 소개 및 전시 정보">
+<meta name="twitter:image" content="https://local-jinny.github.io/NextStop/assets/images/og-image.jpg">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -12,7 +23,10 @@
 <header class="site-header">
   <div class="wrap">
     <a class="site-logo" href="index.html"><span class="pin">✦</span> 환승역: NEXT STOP</a>
-    <a class="signboard" href="gallery.html">← 아카이브로</a>
+    <div class="header-actions">
+      <button class="signboard" id="random-poster-btn" type="button" data-total="14">RANDOMIZED</button>
+      <a class="signboard" href="gallery.html">← 아카이브로</a>
+    </div>
   </div>
 </header>
 
@@ -52,6 +66,8 @@
 <footer class="site-footer">
   <div class="wrap">yawayats 70th EXHIBITION · 2026</div>
 </footer>
+
+<script src="assets/js/random-poster.js"></script>
 
 </body>
 </html>
