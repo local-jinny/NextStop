@@ -134,8 +134,8 @@ h1, h2, h3 { font-family: var(--font); font-weight: 600; margin: 0; }
   }
   .site-logo { font-size: 0.88rem; gap: 5px; }
   .site-logo .pin { font-size: 0.8rem; }
-  .signboard { padding: 6px 12px; font-size: 0.72rem; }
-  .header-actions { gap: 6px; }
+  .signboard { padding: 5px 9px; font-size: 0.6rem; }
+  .header-actions { gap: 5px; }
 }
 
 .site-logo {
@@ -324,6 +324,10 @@ h1, h2, h3 { font-family: var(--font); font-weight: 600; margin: 0; }
   color: var(--navy);
   transform: scale(1.06);
 }
+@media (max-width: 600px) {
+  .arrow-button { width: 46px; height: 46px; margin-top: 24px; }
+  .arrow-button svg { width: 16px; height: 16px; }
+}
 
 .intro-star img {
   width: 30px;
@@ -377,6 +381,14 @@ h1, h2, h3 { font-family: var(--font); font-weight: 600; margin: 0; }
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+@media (max-width: 600px) {
+  .cta-button,
+  .cta-secondary {
+    padding: 11px 22px;
+    font-size: 0.8rem;
+    gap: 6px;
+  }
 }
 
 .cta-button {
@@ -744,6 +756,11 @@ h1, h2, h3 { font-family: var(--font); font-weight: 600; margin: 0; }
   line-height: 1;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .tag { padding: 6px 14px; gap: 6px; }
+  .tag-label { font-size: 0.62rem; }
+  .flap { font-size: 1.1rem; }
 }
 .flap-digit {
   display: inline-block;
