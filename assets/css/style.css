@@ -37,6 +37,8 @@ html {
 }
 @media (max-width: 380px) {
   html { font-size: 13px; }
+  .header-actions { gap: 4px; }
+  .signboard { padding: 4px 7px; font-size: 0.56rem; }
 }
 
 html, body {
@@ -127,6 +129,7 @@ h1, h2, h3 { font-family: var(--font); font-weight: 600; margin: 0; }
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
 }
 @media (max-width: 600px) {
   .site-header .wrap {
@@ -148,6 +151,10 @@ h1, h2, h3 { font-family: var(--font); font-weight: 600; margin: 0; }
   gap: 6px;
   letter-spacing: 0.3px;
   white-space: nowrap;
+  /* 좁은 화면에서 header-actions 버튼과 부딪힐 때 겹치는 대신 말줄임표로 잘리게 함 */
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .site-logo .pin {
   color: var(--point);
@@ -385,9 +392,9 @@ h1, h2, h3 { font-family: var(--font); font-weight: 600; margin: 0; }
 @media (max-width: 600px) {
   .cta-button,
   .cta-secondary {
-    padding: 11px 22px;
-    font-size: 0.8rem;
-    gap: 6px;
+    padding: 14px 30px;
+    font-size: 0.92rem;
+    gap: 7px;
   }
 }
 
