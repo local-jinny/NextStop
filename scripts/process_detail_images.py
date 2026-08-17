@@ -20,18 +20,20 @@ DST_DIR = os.path.join(ROOT, "assets", "images")
 MAX_EDGE = 1600
 TARGET_MAX_BYTES = 600 * 1024
 
+DOWNLOADS = os.path.expanduser("~/Downloads")
+
 SOURCES = [
     {
         "poster_id": "04",
-        "dir": "/Users/yeojin/Downloads/개인부스_인스타_문다희_Dream_to_Dream",
+        "dir": os.path.join(DOWNLOADS, "개인부스_인스타_문다희_Dream_to_Dream"),
     },
     {
         "poster_id": "06",
-        "dir": "/Users/yeojin/Downloads/개인부스_인스타2_신원영_실패로 만들어진 세계",
+        "dir": os.path.join(DOWNLOADS, "개인부스_인스타2_신원영_실패로 만들어진 세계"),
     },
     {
         "poster_id": "08",
-        "dir": "/Users/yeojin/Downloads/개인부스_인스타_이예원_Abberation",
+        "dir": os.path.join(DOWNLOADS, "개인부스_인스타_이예원_Abberation"),
         # 08은 슬라이드 1번이 영상(assets/images/08-video.mp4, 수동으로 복사해둔 원본)이라
         # 이 폴더의 정지 이미지(jpg/png)만 처리 대상으로 한정한다.
         "only_ext": (".jpg", ".jpeg", ".png"),
