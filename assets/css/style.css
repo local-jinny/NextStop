@@ -164,13 +164,13 @@ h1, h2, h3 { font-family: var(--font); font-weight: 600; margin: 0; }
   align-items: center;
   justify-content: center;
   gap: 6px;
-  height: 34px;
-  padding: 0 15px;
+  height: 38px;
+  padding: 0 16px;
   background: var(--point);
   color: var(--navy);
   font-family: var(--font);
-  font-weight: 500;
-  font-size: 0.8rem;
+  font-weight: 700;
+  font-size: 0.85rem;
   border: 1px solid var(--point);
   border-radius: 6px;
   transition: background 0.15s ease, color 0.15s ease;
@@ -191,20 +191,20 @@ h1, h2, h3 { font-family: var(--font); font-weight: 600; margin: 0; }
 }
 .signboard-icon svg {
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 }
 /* 헤더 버튼 모바일 축소 — .signboard 기본 규칙보다 뒤에 있어야 height가 실제로 덮어써진다
    (동일 specificity일 때 소스 순서상 나중 규칙이 이기므로, 미디어쿼리가 앞서 있으면 무시됨) */
 @media (max-width: 600px) {
-  .signboard { height: 28px; padding: 0 9px; font-size: 0.6rem; }
-  .signboard-icon { padding: 0 6px; }
-  .signboard-icon svg { width: 15px; height: 15px; }
+  .signboard { height: 34px; padding: 0 12px; font-size: 0.7rem; }
+  .signboard-icon { padding: 0 8px; }
+  .signboard-icon svg { width: 18px; height: 18px; }
 }
 @media (max-width: 380px) {
-  .signboard { height: 24px; padding: 0 7px; font-size: 0.56rem; }
-  .signboard-icon { padding: 0 5px; }
-  .signboard-icon svg { width: 14px; height: 14px; }
+  .signboard { height: 30px; padding: 0 10px; font-size: 0.66rem; }
+  .signboard-icon { padding: 0 7px; }
+  .signboard-icon svg { width: 16px; height: 16px; }
 }
 
 /* ---------- 랜딩 페이지 히어로 ---------- */
